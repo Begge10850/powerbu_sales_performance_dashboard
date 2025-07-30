@@ -38,6 +38,11 @@ A business-focused report designed for decision-makers. It includes:
 
 ---
 
+📽️ Interactive Dashboard Demo
+Watch a short video demonstration of the dashboard's interactive features:
+
+![Click here to watch on YouTube](https://www.youtube.com/watch?v=w2pjmoucwtY)
+
 ## 🖼️ Dashboard Previews
 
 ### Executive Summary  
