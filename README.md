@@ -39,7 +39,7 @@ Created **two dashboard pages**:
 - 🗺️ **Sales by Region** (West, East, Central, South)
 - 📆 **Sales by Year** (trend line)
 
-![Executive Dashboard](PowerBI_Dashboard_Screenshots/Executive_Summary.png)
+![Executive Dashboard](PowerBI_Dashboard_Screenshots/Executive_sales_summary.png)
 
 ---
 
@@ -54,7 +54,7 @@ Created **two dashboard pages**:
 - 🚚 **Sales by Shipping Mode**
 - 📊 **Sales Cross Table by Segment + Category**
 
-![Market Breakdown](PowerBI_Dashboard_Screenshots/Market_Breakdown.png)
+![Market Performance Overview](PowerBI_Dashboard_Screenshots/Market_performance_overview.png)
 
 ---
 
