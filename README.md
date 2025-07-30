@@ -24,7 +24,7 @@ This report details:
 - Dashboard design decisions
 - Visual summaries and data interpretation
 
-➡️ [View Technical Report (PDF)](./Technical_report.pdf)
+➡️ [View Technical Report (PDF)](PowerBI_Reports/Technical_report.pdf)
 
 ---
 
@@ -34,7 +34,7 @@ A business-focused report designed for decision-makers. It includes:
 - Marketing takeaways and growth recommendations
 - Suggested next steps for commercial strategy
 
-➡️ [View Business/Marketing Report (PDF)](./Marketing_report.pdf)
+➡️ [View Business/Marketing Report (PDF)](PowerBI_Reports/Marketing_report.pdf)
 
 ---
 
