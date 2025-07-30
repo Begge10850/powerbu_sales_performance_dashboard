@@ -1,105 +1,88 @@
-# 📊 Power BI Sales Performance Dashboard
+# 📊 Power BI Sales Performance Dashboard Project
 
-This project is an end-to-end sales performance analysis using **Databricks** for data cleaning and exploration, and **Power BI** for interactive dashboard creation and business insights visualization.
-
-> ✅ **Objective**: Analyze sales data to uncover trends, segment performance, and regional breakdowns that guide strategic decision-making.
+This project explores a retail sales dataset through end-to-end data analysis, transformation, and visualization. The goal was to extract actionable business insights and present them in an interactive Power BI dashboard suitable for both technical and non-technical stakeholders.
 
 ---
 
-## 🚀 Tools & Technologies Used
+## 🧠 Project Summary
 
-| Tool         | Purpose                                 |
-|--------------|------------------------------------------|
-| **Databricks** | Data exploration and cleaning using PySpark |
-| **Power BI**   | Interactive dashboard creation & storytelling |
-| **GitHub**     | Version control and project hosting      |
+I used **Databricks** to clean and analyze raw sales data through SQL and Python. After transforming the dataset, I exported it to **Power BI** to create a dynamic and professional dashboard with multiple pages, including:
 
----
+- Executive Sales Summary
+- Market Performance Overview
 
-## 🛠️ Project Workflow
-
-### 1. **Data Cleaning & Preparation**
-- Dataset was first loaded and explored in **Databricks**.
-- Removed nulls, renamed inconsistent fields, and engineered features like `Total Profit`, `Monthly Date`, and parsed categories.
-- Cleaned dataset was exported as `.csv` for use in Power BI.
-
-### 2. **Data Analysis in Power BI**
-Created **two dashboard pages**:
+The final dashboard was published on **Power BI Service (My Workspace)**, making it accessible online.
 
 ---
 
-## 📘 Dashboard 1: Executive Sales Summary
+## 📌 Reports
 
-> A top-level overview of sales KPIs from 2015 to 2018.
+### 📘 1. Technical Report (Exploratory & Power BI Process)
+This report details:
+- Data cleaning and exploration steps in Databricks
+- Data export process to Power BI
+- Dashboard design decisions
+- Visual summaries and data interpretation
 
-- 💰 **Total Sales**: €2.26M
-- 📦 **Total Orders**: 4,922
-- 📈 **Avg. Sales/Order**: €459.48
-- 📊 **Sales by Segment** (Consumer, Corporate, Home Office)
-- 🗺️ **Sales by Region** (West, East, Central, South)
-- 📆 **Sales by Year** (trend line)
+➡️ [View Technical Report (PDF)](./Technical_report.pdf)
 
+---
+
+### 📗 2. Business/Marketing Report (Insights & Recommendations)
+A business-focused report designed for decision-makers. It includes:
+- Key insights by region, segment, and product
+- Marketing takeaways and growth recommendations
+- Suggested next steps for commercial strategy
+
+➡️ [View Business/Marketing Report (PDF)](./Marketing_report.pdf)
+
+---
+
+## 🖼️ Dashboard Previews
+
+### Executive Summary  
 ![Executive Dashboard](PowerBI_Dashboard_Screenshots/Executive_sales_summary.png)
 
----
-
-## 📘 Dashboard 2: Market Performance Overview
-
-> Deep dive into categories, sub-categories, shipping modes, and monthly trends.
-
-- 🔍 **Sales by Sub-Category** (e.g., Phones, Chairs, Binders)
-- 📦 **Sales by Category** (Technology, Furniture, Office Supplies)
-- 📦 **Sales by Month** (seasonality patterns)
-- 📦 **Sales by Segment over Time**
-- 🚚 **Sales by Shipping Mode**
-- 📊 **Sales Cross Table by Segment + Category**
-
+### Market Performance Overview  
 ![Market Performance Overview](PowerBI_Dashboard_Screenshots/Market_performance_overview.png)
 
 ---
 
-## 📁 Folder Structure
+## 🧰 Tools & Skills Used
 
-├── cleaned_dataset.csv
-├── PowerBI_Dashboard_Screenshots/
-│ ├── Executive_Summary.png
-│ └── Market_Breakdown.png
-├── PowerBI_Notebook_Analysis.ipynb
-└── README.md
-
+- **Python** (Data cleaning, EDA in Databricks)
+- **SQL** (Aggregations, joins, filtering)
+- **Databricks** (Notebooks, tables, interactive queries)
+- **Power BI** (Visual dashboards, DAX, slicers, cards, bar charts)
+- **GitHub** (Version control & documentation)
 
 ---
 
-## 🔗 Live Power BI Dashboard
+## 📁 Files in This Repo
 
-You can view and interact with the live dashboard here:  
-**[🔗 View Dashboard on Power BI Service](https://app.powerbi.com/groups/me/reports/xxxxxx)**  
-_(Replace this with your actual link from Power BI Service)_
-
----
-
-## ✅ Key Learnings
-
-- Hands-on experience using **Databricks** for scalable data prep.
-- Built multi-page Power BI dashboards using slicers, cards, charts, and cross filters.
-- Learned how to integrate Python data pipelines with Power BI visualization layers.
-- Created a recruiter-ready portfolio project that mimics a real-world BI scenario.
+| File/Folder | Description |
+|-------------|-------------|
+| `Databricks_Notebooks/` | Data exploration and cleaning in `.ipynb` format |
+| `PowerBI_Reports/` | PDF reports (technical and business/marketing) |
+| `PowerBI_Dashboard_Screenshots/` | Visual snapshots from Power BI dashboard |
+| `Sales_report.pbix` | Original Power BI dashboard file |
 
 ---
 
-## 📌 Project Status
+## 🔗 Live Dashboard (Optional)
 
-✅ Completed and hosted live  
-📤 Featured in CV and LinkedIn  
-🔧 Future improvement: Include profit margin, region-based profitability, and drill-through reports.
+If published publicly, insert your Power BI dashboard link here:
+
+➡️ [View Live Dashboard](https://app.powerbi.com/...)
 
 ---
 
 ## 📬 Contact
 
-**Treva Antony Ogwang**  
-[LinkedIn](https://www.linkedin.com/in/treva-ogwang-87235626b/) · [GitHub](https://github.com/Begge10850)
+Created by **Treva Antony Ogwang**  
+📍 Potsdam/Berlin, Germany  
+🔗 [LinkedIn](https://www.linkedin.com/in/treva-ogwang-87235626b/)  
+📁 [GitHub Portfolio](https://github.com/Begge10850)
 
 ---
-
 
