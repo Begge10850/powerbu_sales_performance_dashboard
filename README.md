@@ -51,7 +51,7 @@ A business-focused report designed for decision-makers. It includes:
 ## 🧰 Tools & Skills Used
 
 - **Python** (Data cleaning, EDA in Databricks)
-- **SQL** (Aggregations, joins, filtering)
+- **SQL** (Aggregations, filtering)
 - **Databricks** (Notebooks, tables, interactive queries)
 - **Power BI** (Visual dashboards, DAX, slicers, cards, bar charts)
 - **GitHub** (Version control & documentation)
