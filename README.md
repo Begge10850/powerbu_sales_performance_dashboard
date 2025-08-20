@@ -78,8 +78,6 @@ Watch a short video demonstration of the dashboard's interactive features:
 
 ## 🔗 Live Dashboard (Optional)
 
-If published publicly, insert your Power BI dashboard link here:
-
 ➡️ [View Live Dashboard](https://app.powerbi.com/...)
 
 ---
