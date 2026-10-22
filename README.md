@@ -1,93 +1,136 @@
-# 📊 Power BI Sales Performance Dashboard Project
+# Sales Performance Analytics — Databricks and Power BI
 
-This project explores a retail sales dataset through end-to-end data analysis, transformation, and visualization. The goal was to extract actionable business insights and present them in an interactive Power BI dashboard suitable for both technical and non-technical stakeholders.
+An end-to-end business-intelligence portfolio project analysing US retail sales
+from 2015–2018 with Databricks, PySpark, Spark SQL, and Power BI.
 
----
+> Portfolio project, not a commercial deployment. The analysis is descriptive and
+> does not claim production adoption or measured business impact.
 
-## 🧠 Project Summary
+## Project objective
 
-I used **Databricks** to clean and analyze raw sales data through SQL and Python. After transforming the dataset, I exported it to **Power BI** to create a dynamic and professional dashboard with multiple pages, including:
+The project answers how recorded sales vary by time, customer segment, region,
+state, category, sub-category, customer, and shipping mode. The technical workflow
+prepares and validates the data in Databricks; Power BI presents the results through
+an executive summary and an interactive market breakdown.
 
-- Executive Sales Summary
-- Market Performance Overview
+## Architecture
 
-The final dashboard was published on **Power BI Service (My Workspace)**, making it accessible online.
+```text
+Registered Databricks `train` table
+              ↓
+PySpark schema and quality validation
+              ↓
+Temporary Spark SQL analytical view
+              ↓
+Business queries and reconciled KPIs
+              ↓
+Validated persistent Delta table
+              ↓
+Power BI semantic model and two report pages
+              ↓
+Technical and stakeholder communication
+```
 
----
+## Verified project scope
 
-## 📌 Reports
+| Item | Evidence-backed value |
+|---|---:|
+| Sales line items | 9,800 |
+| Distinct orders | 4,922 |
+| Recorded sales value | 2,261,536.78 |
+| Sales per order | 459.48 |
+| Period | 2015–2018 |
+| Geography | United States |
 
-### 📘 1. Technical Report (Exploratory & Power BI Process)
-This report details:
-- Data cleaning and exploration steps in Databricks
-- Data export process to Power BI
-- Dashboard design decisions
-- Visual summaries and data interpretation
+The source currency is not documented, so this README deliberately uses
+“recorded sales value” rather than assigning a currency.
 
-➡️ [View Technical Report (PDF)](PowerBI_Reports/Technical_report.pdf)
+## Selected findings
 
----
+- Consumer accounted for approximately 50.8% of recorded sales.
+- West and East together contributed approximately 61.0%.
+- Technology was the leading category at approximately 827.5K.
+- Q4 accounted for approximately 38.5% of recorded sales.
+- California led states and Sean Miller led customers by recorded sales.
+- Annual sales fell in 2016, then increased in 2017 and 2018; the data does not
+  support a claim of uninterrupted year-over-year growth.
 
-### 📗 2. Business/Marketing Report (Insights & Recommendations)
-A business-focused report designed for decision-makers. It includes:
-- Key insights by region, segment, and product
-- Marketing takeaways and growth recommendations
-- Suggested next steps for commercial strategy
+These are descriptive findings. They motivate further investigation but do not
+prove profitability, marketing effectiveness, or causality.
 
-➡️ [View Business/Marketing Report (PDF)](PowerBI_Reports/Marketing_report.pdf)
+## Dashboard pages
 
----
+### Executive Sales Summary
 
-### 🎥 Interactive Dashboard Demo
+Headline KPIs with segment, regional, and annual sales views.
 
-Watch a short video demonstration of the dashboard's interactive features:
+### Market Performance Overview
 
-[Click here to watch on YouTube](https://youtu.be/w2pjmoucwtY?si=609x_w7ytHcw-lk2)
+Interactive year and segment filtering with category, sub-category, shipping,
+and monthly breakdowns.
 
+## Corrections in the improved version
 
-## 🖼️ Dashboard Previews
+- Distinguishes sales line items from distinct orders.
+- Calculates average order value after aggregating product lines to order level.
+- Counts distinct orders for shipping-mode usage.
+- Adds row-count, schema, null, duplicate, date, and sales validation.
+- Preserves chronological year-month values.
+- Publishes a validated persistent Delta table for direct Power BI connectivity
+  rather than downloading a truncated Databricks display.
+- Replaces unsupported profitability, ROI, and conversion language with
+  evidence-based sales terminology.
 
-### Executive Summary  
-![Executive Dashboard](PowerBI_Dashboard_Screenshots/Executive_sales_summary.png)
+## Repository contents
 
-### Market Performance Overview  
-![Market Performance Overview](PowerBI_Dashboard_Screenshots/Market_performance_overview.png)
+| Path | Purpose |
+|---|---|
+| `notebooks/Superstore_BI_Notebook_Improved.py` | Databricks-importable validated notebook |
+| `documentation/metric-definitions.md` | Business definitions and calculation rules |
+| `documentation/data-dictionary.md` | Field descriptions and modelling notes |
+| `documentation/validation-plan.md` | Acceptance criteria and retained evidence |
+| `powerbi/dax-measures.md` | Explicit Power BI measure definitions |
+| `powerbi/dashboard-improvement-guide.md` | Visual and model changes to apply in Desktop |
+| `reports/technical-report-revised.md` | Corrected technical narrative |
+| `reports/stakeholder-report-revised.md` | Claim-safe business narrative |
+| `website/portfolio-project-copy.md` | Website-ready case-study copy |
 
----
+## Reproduction
 
-## 🧰 Tools & Skills Used
+1. Import `notebooks/Superstore_BI_Notebook_Improved.py` into Databricks.
+2. Confirm that the registered source table is named `train`.
+3. Run cells through the validation section and inspect failures before continuing.
+4. Run the analysis cells.
+5. Run the publication cell and confirm the persistent table contains 9,800 rows,
+   4,922 orders, and 2,261,536.78 in total sales.
+6. Connect Power BI to the Databricks SQL warehouse and select the published table.
+7. Refresh a copy of the report.
+8. Apply the explicit DAX measures and verify the KPI reconciliation table.
 
-- **Python** (Data cleaning, EDA in Databricks)
-- **SQL** (Aggregations, filtering)
-- **Databricks** (Notebooks, tables, interactive queries)
-- **Power BI** (Visual dashboards, DAX, slicers, cards, bar charts)
-- **GitHub** (Version control & documentation)
+## Known limitations
 
----
+- The data contains Sales but not Profit, Cost, Margin, Discount, Campaign Spend,
+  Conversion, Inventory, or Returns.
+- Exact duplicate rows must be investigated rather than removed automatically;
+  repeated Order IDs normally represent legitimate product lines.
+- The Power BI share link requires Microsoft authentication and is not a public
+  anonymous portfolio link.
+- The existing GitHub CSV contains only 9,708 rows because it matches the boundary
+  of a Databricks result labelled “9,708+ rows — Truncated data.”
+- Recommendations are hypotheses for future validation, not measured outcomes.
 
-## 📁 Files in This Repo
+## Tools demonstrated
 
-| File/Folder | Description |
-|-------------|-------------|
-| `Databricks_Notebooks/` | Data exploration and cleaning in `.ipynb` format |
-| `PowerBI_Reports/` | PDF reports (technical and business/marketing) |
-| `PowerBI_Dashboard_Screenshots/` | Visual snapshots from Power BI dashboard |
-| `Sales_report.pbix` | Original Power BI dashboard file |
+Databricks · PySpark · Spark SQL · data-quality validation · Power BI · DAX ·
+dashboard design · business reporting · Git/GitHub
 
----
+## Links
 
-## 🔗 Live Dashboard (Optional)
+- [GitHub repository](https://github.com/Begge10850/powerbu_sales_performance_dashboard)
+- [Dashboard demonstration](https://youtu.be/w2pjmoucwtY)
+- Databricks and Power BI workspace links require authentication.
 
-➡️ [View Live Dashboard](https://app.powerbi.com/links/fHRqS1x5P3?ctid=3b4a51c3-1f0b-46fa-b4b4-1ea1e00ec0d0&pbi_source=linkShare)
+## Author
 
----
-
-## 📬 Contact
-
-Created by **Treva Antony Ogwang**  
-📍 Potsdam/Berlin, Germany  
-🔗 [LinkedIn]([https://www.linkedin.com/in/treva-ogwang-87235626b/](https://app.powerbi.com/links/fHRqS1x5P3?ctid=3b4a51c3-1f0b-46fa-b4b4-1ea1e00ec0d0&pbi_source=linkShare))  
-📁 [GitHub Portfolio](https://github.com/Begge10850)
-
----
-
+Treva Antony Ogwang — [LinkedIn](https://www.linkedin.com/in/treva-ogwang-87235626b/) ·
+[GitHub](https://github.com/Begge10850)
