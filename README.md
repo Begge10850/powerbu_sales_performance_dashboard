@@ -78,7 +78,7 @@ Watch a short video demonstration of the dashboard's interactive features:
 
 ## 🔗 Live Dashboard (Optional)
 
-➡️ [View Live Dashboard](https://app.powerbi.com/...)
+➡️ [View Live Dashboard](https://app.powerbi.com/links/fHRqS1x5P3?ctid=3b4a51c3-1f0b-46fa-b4b4-1ea1e00ec0d0&pbi_source=linkShare)
 
 ---
 
