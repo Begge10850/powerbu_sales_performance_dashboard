@@ -86,7 +86,7 @@ Watch a short video demonstration of the dashboard's interactive features:
 
 Created by **Treva Antony Ogwang**  
 📍 Potsdam/Berlin, Germany  
-🔗 [LinkedIn](https://www.linkedin.com/in/treva-ogwang-87235626b/)  
+🔗 [LinkedIn]([https://www.linkedin.com/in/treva-ogwang-87235626b/](https://app.powerbi.com/links/fHRqS1x5P3?ctid=3b4a51c3-1f0b-46fa-b4b4-1ea1e00ec0d0&pbi_source=linkShare))  
 📁 [GitHub Portfolio](https://github.com/Begge10850)
 
 ---
